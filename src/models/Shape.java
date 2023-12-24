@@ -14,7 +14,7 @@ public class Shape {
 
         for (int i = 0; i < size; i++) {
             Point currentPoint = points.get(i);
-            Point nextPoint = points.get((i + 1) % size); // замыкаем фигуру
+            Point nextPoint = points.get((i + 1) % size);
             perimeter += currentPoint.distanceTo(nextPoint);
         }
 

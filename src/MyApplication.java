@@ -22,11 +22,11 @@ public class MyApplication {
             double longestSide = shape.getLongestSide();
             double averageSide = shape.getAverageSide();
 
-            System.out.println("Периметр фигуры: " + perimeter);
-            System.out.println("Самая длинная сторона: " + longestSide);
-            System.out.println("Средняя длина сторон: " + averageSide);
+            System.out.println("Perimeter: " + perimeter);
+            System.out.println("Long Side: " + longestSide);
+            System.out.println("Average Side: " + averageSide);
         } else {
-            System.out.println("Недостаточно точек для построения фигуры.");
+            System.out.println("There are not enough points to build a shape.");
         }
     }
 
@@ -34,7 +34,7 @@ public class MyApplication {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
             Random random = new Random();
             for (int i = 0; i < numberOfPoints; i++) {
-                double x = random.nextDouble() * 100; // случайное число от 0 до 100
+                double x = random.nextDouble() * 100;
                 double y = random.nextDouble() * 100;
                 writer.write(x + " " + y);
                 writer.newLine();
@@ -65,26 +65,4 @@ public class MyApplication {
     }
 }
 
-// import java.io.File;
-// import java.io.FileNotFoundException;
-// import java.util.Scanner;
 
-// public class MyApplication {
-//     public static void main(String[] args) throws FileNotFoundException {
-//         File file = new File("");
-
-//         Scanner sc = new Scanner(file);
-//         Shape shape = new Shape(null);
-
-//         while (sc.hasNext()) {
-//             double x = sc.nextDouble(); 
-//             double y = sc.nextDouble();
-
-//             Point point = new Point(y, y);
-//             shape.addPoint(point);
-//         }
-
-//         System.out.println(shape.calculatePerimeter());
-//         System.out.println(shape.getLongest());
-//     }
-// }
